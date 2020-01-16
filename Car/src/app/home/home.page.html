@@ -1,0 +1,115 @@
+<ion-header>
+    <ion-toolbar align="center" style="color:blue">
+      <ion-title >
+          <p style = "font-family:georgia,garamond,serif;font-size:14px;;">
+              คำนวณค่างวดรถ(ผ่อนรถ) อัตราดอกเบี้ย (แบบรายปี)
+           </p>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+
+      <ion-item  style="width:85%;">
+          <ion-label position="stacked">ชื่อ<ion-text color="dark"></ion-text></ion-label>
+          <ion-input placeholder="กรุณาใส่ชื่อ" [(ngModel)]="input_name" required></ion-input>
+    </ion-item>
+
+    <ion-item  style="width:85%;">
+        <ion-label position="stacked">นามสกุล<ion-text color="dark"></ion-text></ion-label>
+        <ion-input placeholder="กรุณาใส่นามสกุล" [(ngModel)]="input_last" required></ion-input>
+  </ion-item>
+  
+    <ion-item  style="width:85%;">
+          <ion-label position="stacked">ราคารถที่ต้องการผ่อน<ion-text color="dark"> (บาท)</ion-text></ion-label>
+          <ion-input placeholder="กรุณาใส่ราคารถ" [(ngModel)]="input_price" required></ion-input>
+    </ion-item>
+  
+    <ion-item  style="width:85%;">
+          <ion-label position="stacked">เงินดาวน์ <ion-text color="dark">(บาท)</ion-text></ion-label>
+          <ion-input placeholder="กรุณาใส่เงินดาวน์" [(ngModel)]="input_down" required></ion-input>
+    </ion-item>
+
+    <ion-item  style="width:85%;">
+        <ion-label position="stacked">อัตราดอกเบี้ย <ion-text color="dark">(เปอร์เซ็นต์)</ion-text></ion-label>
+        <ion-input placeholder="กรุณาใส่อัตราดอกเบี้ย" [(ngModel)]="input_interest_rate" required></ion-input>
+  </ion-item>
+
+  <ion-item  style="width:85%;">
+      <ion-label position="stacked">จำนวนปีที่ทำการผ่อนชำระ  <ion-text color="dark">(ปี)</ion-text></ion-label>
+      <ion-input placeholder="ท่านจะผ่อนทั้งหมด" [(ngModel)]="input_pay_year" required></ion-input>
+</ion-item>
+
+<ion-item  style="width:85%;">
+    <ion-label position="stacked">จำนวนเดือนที่ต้องผ่อนชำระ  <ion-text color="dark">(เดือน)</ion-text></ion-label>
+    <ion-input placeholder="ท่านจะผ่อนทั้งหมด" [(ngModel)]="input_pay_month" required></ion-input>
+</ion-item>
+
+  
+<ion-toolbar align="center" style="color:blue">
+    <p style = "font-family:georgia,garamond,serif;font-size:16px;;">
+        รายละเอียดการผ่อนรถของคุณ
+     </p>
+</ion-toolbar>
+
+<div style="margin:5px 5px 5px 5px">
+      <label>{{price_car1}} {{price|number}}  {{bath1}}</label>
+   </div>
+   
+   <div style="margin:5px 5px 5px 5px">
+    <label>{{yoddown1}}  {{down | number }} {{bath1}} </label>
+  </div>
+
+  <div style="margin:5px 5px 5px 5px">
+      <label>{{finan1}} {{finance | number }} {{bath1}} </label>
+    </div>
+
+  <div style="margin:5px 5px 5px 5px">
+    <label>{{interes1}} {{interest_rate| number }} {{p1}}</label>
+  </div>
+
+  <div style="margin:5px 5px 5px 5px">
+      <label>{{nume_y1}} {{pay_year| number }} {{y1}}</label>
+    </div>
+
+    <div style="margin:5px 5px 5px 5px">
+        <label>{{num_m1}} {{pay_month| number }} {{m1}}</label>
+      </div>
+
+  <div style="margin:5px 5px 5px 5px">
+    <label>{{num_interes1}} {{interest_year | number }} {{bath1}}</label>
+  </div>
+
+  
+  <div style="margin:5px 5px 5px 5px">
+    <label>{{all_interes1}} {{interest_total | number }} {{bath1}}</label>
+  </div>
+  
+  <div style="margin:5px 5px 5px 5px">
+      <label>{{total_dept1}} {{debt | number}} {{bath1}}</label>
+    </div>
+
+
+    <div style="margin:5px 5px 5px 5px">
+        <label>{{yod_m1}} {{payment | number :'1.2-2'}} {{bath1}}</label>
+      </div>
+  
+
+
+
+
+<br>
+  <div align="center" style="margin:5px 5px 5px 5px" >
+    <label><ins>{{total_price1}} {{name1}}  {{last1}} {{ttpay1}} <mark>{{pay_total | number :'1.2-2'}} {{bath1}}</mark>  </ins></label>
+  </div>
+  
+  
+  <div  style="padding:5px 5px 5px 5px">
+    <ion-button expand="full" (click)="Calculated()">คำนวณ</ion-button> 
+    
+  </div>
+
+  
+  
+  </ion-content>
+  

@@ -1,0 +1,117 @@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<ion-header>
+  <style>
+    p.normal {
+      font-style: normal;
+    }
+    
+    p.italic {
+      font-style: italic;
+    }
+    
+    p.oblique {
+      font-style: oblique;
+    }
+    </style>
+
+  <ion-toolbar>
+      <ion-title style="background:lavenderblush;">
+        <div style="padding:10px 15px 10px 15px" >
+
+        <button (click)="gohome()" type="button"style="background:lavenderblush;">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </button>
+       
+
+      
+      </div>
+
+
+        </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <div  style="background:lavenderblush;">
+  <div style="padding:6px 5px 6px 5px" >
+       <button style="background:lightcoral;" >น้ำหอม</button>
+       <button  style="background:lightsalmon;"  >เมคอัพ</button>
+       <button  style="background:lightskyblue;" >ดูแลเส้นผม</button>
+       <button  style="background:navajowhite;" >ดูแลผิวกาย</button>
+
+       
+       <div align="center">
+       
+       <p class="oblique">รายการสินค้าร้าน  PERFUME SHOP <img src="/assets/Liw.jpg"class="rounded"alt="Cinque Terre" width="20px" height="20px"></p>
+       
+      </div>
+      
+  </div>
+  
+    <div style="background:lavenderblush;">
+      DIOR Miss Dior Eau De Parfum 
+      <br>
+      <mark style="background:orange;">฿3,000.00</mark>
+            <img (click)="godetail()" src="https://static-th.lximg.com/images/pictures/46968/closeup_07f328b0c38f7a3a5754463693606864e8f5efca_1576053956_02_packaging_20miss_20dior_20edp_1000.jpg"style="font-size: 10px;">
+    </div>
+
+     <div align="center" >
+           <button style="font-size: 10px;" (click)="godetail()" type="button" class="btn btn-info">เพิ่มเติม</button>
+    </div> 
+
+    <div style="background:lavenderblush;">
+      BURBERRY  My Burberry Blush Eau De Parfum <br>
+       <mark style="background:orange;">฿4,100.00</mark>
+              <img (click)="godetail()" src="https://static-th.lximg.com/images/pictures/25956/closeup_204d4183c2dc0046cdfcf41b8d609327f8db7e3a_1530153096_5045498902158_My_Burberry_Blush_Eau_de_Parfum_50ml_Flacon_Carton.jpg"style="font-size: 10px;">
+    </div>
+
+      <div align="center" >
+              <button style="font-size: 10px;" (click)="godetail()" type="button" class="btn btn-info" >เพิ่มเติม</button>
+      </div>
+
+
+      <div style="background:lavenderblush;" >
+        DIOR Sauvage Eau De Parfum <mark style="background:orange;">฿4,900.00</mark>
+                <img (click)="godetail()" src="https://static-th.lximg.com/images/pictures/34706/closeup_d44c9609e46d72689aeca127f045f3960025dff6_1553764666_3348901368247_1.jpg"style="font-size: 10px;">
+      </div>
+
+        <div align="center" >
+                <button style="font-size: 10px;" (click)="godetail()" type="button" class="btn btn-info" >เพิ่มเติม</button>
+        </div>
+
+      <div style="background:lavenderblush;">
+        DAVIDOFF
+
+        Cool Water Intense For Him Eau De Parfum <br>
+        <mark style="background:orange;">฿2,650.00</mark>
+                  <img (click)="godetail()" src="https://static-th.lximg.com/images/pictures/44530/closeup_812ba8c71a337a6f13fec0bd930a0cb7a14357e1_1572495997_3614228174237_davcwmint19edp75mlpackangle.jpg"style="font-size: 10px;">
+        </div>
+        <div align="center" >
+                 <button style="font-size: 10px;" (click)="godetail()" type="button" class="btn btn-info">เพิ่มเติม</button>
+       </div>
+
+            <div style="background:lavenderblush;">
+              DIOR Miss Dior Eau de Toilette 
+              <mark style="background:orange;"> ฿1,850.00</mark>
+                    <img (click)="godetail()" src="https://static-th.lximg.com/images/pictures/35242/closeup_d20b70720e08d674a4c3c2bbf0962dc4d5590314_1554197924_3348901455381_1.jpg"style="font-size: 10px;">
+            </div>
+
+             <div align="center" >
+                   <button style="font-size: 10px;" (click)="godetail()" type="button" class="btn btn-info">เพิ่มเติม</button>
+            </div> 
+            
+            <div style="background:lavenderblush;">
+              HUDA BEAUTY  Kayali Vanilla|28 - Exclusive For Sephora Online  100ml  
+              <mark style="background:orange;">฿3,000.00</mark>
+                        <img (click)="godetail()" src="https://static-th.lximg.com/images/pictures/35682/closeup_00cb19f2fa4e7a11f8fcad5b77cd3df7f1b3d169_1556086937_KAY_50ml_Vanilla_Bottle.png"style="font-size: 10px;">
+              </div>
+              <div align="center" >
+                       <button style="font-size: 10px;" (click)="godetail()" type="button" class="btn btn-info">เพิ่มเติม</button>
+             </div>
+
+    </div>  
+</ion-content>

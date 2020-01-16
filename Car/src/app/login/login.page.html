@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+  
+
+<ion-header>
+  <style>
+    p.normal {
+      font-style: normal;
+    }
+    
+    p.italic {
+      font-style: italic;
+    }
+    
+    p.oblique {
+      font-style: oblique;
+    }
+    </style>
+
+
+  <ion-toolbar>
+      <ion-title align="center" style="background:whitesmoke;" >
+          <div  style = "font-family:courier,garamond,serif;font-size:34px;;"  >
+            <p class="btn-outline-back">--- DEVE CAR ---</p>
+        
+          </div>
+        </ion-title>
+    </ion-toolbar>
+ </ion-header>
+
+<ion-content align="center" >
+  <div style="background:whitesmoke;" >
+
+      <ion-icon name="logo-octocat" style="font-size: 95px;"></ion-icon>
+   
+
+ 
+
+     
+  <div class="form-group">
+        <label for="usur">ชื่อผู้ใช้งาน</label>
+          <input style="font-size: 15px;"   type="text" placeholder="  " class="form-control" id="user" name="username"[(ngModel)]="input_user" required>
+    </div>
+        <div class="form-group">
+          <label for="pass">รหัสผ่าน</label>
+            <input style="font-size: 15px;" type="password" placeholder="  " class="form-control" id="pass" name="password"[(ngModel)]="input_pass" required>
+    </div>  
+
+        
+
+
+
+            <div  style="padding:5px 5px 5px 5px">
+
+                <button expand="full" (click)="checkuser()" type="button" class="btn btn-outline-primary">ลงชื่อเข้าใช้</button>
+ 
+               <div><br> 
+              <label style="color:red;"> {{text}}  
+            </label>
+           </div>
+     </div>
+</div>
+
+</ion-content>
+ 
+</html>   
+  <div align = "center">
+   <!-- <audio  src="../../assets/mp3/JOKER Kina - get you the moon.mp3" metadata="5px" autoplay ="auto" controls  ></audio>-->
+    <!--This is a comment. Comments are not displayed in the browser-->
+  </div>

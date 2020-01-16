@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <div align = "center">
+    <ion-title>Product</ion-title>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item  style="width:85%;">
+  <!-- <ion-label position="stacked">ชื่อ<ion-text color="dark"></ion-text></ion-label> -->
+  <ion-input placeholder="รหัสสมาชิก" [(ngModel)]="cus_id" required></ion-input>
+  </ion-item>
+
+  <ion-item  style="width:85%;">
+  <!--  <ion-label position="stacked">ที่อยู่<ion-text color="dark"></ion-text></ion-label> -->
+  <ion-input placeholder="ที่อยู่จั่งหวัด" [(ngModel)]="tran_address" required></ion-input>
+  </ion-item>
+
+
+  <ion-card>
+    <ion-card-header>
+  <div *ngFor = "let item of item_two_d;let i=index">
+    <h1>รายการสินค้า {{i +1}} </h1>
+
+    <h6>ชื่อสินค้า : {{item.name}}</h6>
+    
+    <div>รหัสสินค้า : {{item.id}}</div>
+    
+    <div>ราคา : {{item.price}}</div> 
+    
+    <div>จำนวน : {{item.num}}</div>
+    <div><br>
+      <div>{{numm}} :{{totalnum}}</div>
+      <div>{{pricee}} :{{totalprice}}</div>
+      <ion-button color="tertiary" (click)="add_cart(item.name,item.id,item.price,item.num)">เลือกซื้อสินค้า</ion-button>
+      ========================
+    </div>
+  </div>
+
+
+
+  <!-- <div>
+    <ion-button color="secondary" (click)="add_item()">add_item</ion-button>
+  </div>
+
+  <div>
+    <ion-button color="success" (click)="update_item()">update_item</ion-button>
+  </div>
+
+  <div>
+    <ion-button color="warning" (click)="remove_item()">remove_item</ion-button>
+  </div> -->
+
+  </ion-card-header>
+ </ion-card>
+</ion-content>

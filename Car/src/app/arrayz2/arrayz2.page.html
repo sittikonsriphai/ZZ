@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <div align = "center">
+    <ion-title>อาเรย์2 มิติ</ion-title>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+  <div *ngFor = "let item of item_two_d">
+    <h1>ชื่อสินค้า :{{item.name}}</h1>
+    <br>
+    <div>รหัสสินค้า :{{item.id}}</div>
+    <br>
+    <div>ราคา :{{item.price}}</div> <div>จำนวน :{{item.num}}</div>
+    <br>
+    <div>ผู้จัดจำหน่าย :{{item.vender.vname}}</div>
+    <div>--------------------------</div>
+  </div>
+
+
+  <!-- <div> 
+    <ion-label position="stacked">ชื่อสินค้า
+      <ion-text color="dark"></ion-text>
+    </ion-label>
+      <ion-input placeholder="Enter name" [(ngModel)] = "name_pro" ></ion-input>
+  </div>
+
+  <div> 
+    <ion-label position="stacked">รหัสสินค้า
+      <ion-text color="dark"></ion-text>
+    </ion-label>
+      <ion-input placeholder="Enter Input" [(ngModel)] = "id_pro" ></ion-input>
+  </div>
+
+  <div> 
+    <ion-label position="stacked">ราคา
+      <ion-text color="dark"></ion-text>
+    </ion-label>
+      <ion-input placeholder="Enter Input" [(ngModel)] = "price_pro" ></ion-input>
+  </div>
+
+  <div> 
+    <ion-label position="stacked">จำนวน
+      <ion-text color="dark"></ion-text>
+    </ion-label>
+      <ion-input placeholder="Enter Input" [(ngModel)] = "num_pro" ></ion-input>
+  </div>
+
+  <div> 
+    <ion-label position="stacked">ผู้จัดจำหน่าย
+      <ion-text color="dark"></ion-text>
+    </ion-label>
+      <ion-input placeholder="Enter ID " [(ngModel)] = "vid_id" ></ion-input>
+      <ion-input placeholder="Enter NAME " [(ngModel)] = "vname_name" ></ion-input>
+      <ion-input placeholder="Enter RATE" [(ngModel)] = "vrate_rate" ></ion-input>
+
+
+    <div>
+      <ion-button color="secondary" (click)="add_pro()">ยืนยัน</ion-button>
+    </div>
+  </div>
+      -->
+
+
+  <div>
+    <ion-button color="tertiary" (click)="get_item()">View_item</ion-button>
+  </div>
+  <div>
+    <ion-button color="secondary" (click)="add_item()">add_item</ion-button>
+  </div>
+
+  <div>
+    <ion-button color="success" (click)="update_item()">update_item</ion-button>
+  </div>
+
+  <div>
+    <ion-button color="warning" (click)="remove_item()">remove_item</ion-button>
+  </div>
+
+  </ion-card-header>
+ </ion-card>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <div align ="center">
+      <ion-title>อาเรย์ 1 มิติ</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button color="primary" (click) = "get_item()">Primary</ion-button>
+
+  <ion-button color="success" (click) = "add_item()">Push</ion-button>
+
+  <ion-button color="danger" (click) = "delete_item()">Pop</ion-button>
+
+  <br>
+  
+  <ion-input placeholder="Enter Input" [(ngModel)] = "box1"></ion-input>
+
+  <br>
+
+  <ion-button color="dark" (click) = "update_item()">Update</ion-button>
+
+  <br><br>
+
+  <div *ngFor="let item of item_one_d">
+    <label>{{item}}</label>
+  </div>
+
+</ion-content>
